@@ -5,18 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cultivate Funding Strategies, LLC | Carynne McIver Button</title>
 <meta name="description" content="Cultivate Funding Strategies, LLC — grant writing and strategy for nonprofits, led by Carynne McIver Button.">
+<link rel="icon" type="image/svg+xml" href="assets/cultivate.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400,60;0,9..144,600,60;1,9..144,500,60&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 
   :root{
-    --ink: #223B2E;
-    --paper: #F7F1E4;
-    --gold: #C7963A;
-    --soil: #6E4A2E;
-    --sage: #7C9274;
-    --line: rgba(34,59,46,0.14);
+    --ink: #3E5230;
+    --paper: #F8F3E7;
+    --gold: #C49B6A;
+    --soil: #8A6239;
+    --sage: #A8C568;
+    --line: rgba(62,82,48,0.14);
   }
 
   *{ box-sizing: border-box; }
@@ -41,13 +42,16 @@
     padding: 8vh 28px 10vh;
   }
 
-  /* Signature element: a small sprouting mark beside the wordmark */
-  .mark{
-    width: 34px;
-    height: 34px;
+  .hero{
+    text-align: center;
+    margin: 0 0 46px;
+  }
+
+  .logo{
+    width: 128px;
+    height: 128px;
     display: block;
-    margin-bottom: 28px;
-    color: var(--gold);
+    margin: 0 auto 28px;
   }
 
   .eyebrow{
@@ -74,13 +78,13 @@
     font-weight: 500;
     font-size: 1.25rem;
     color: var(--soil);
-    margin: 0 0 30px;
+    margin: 0 0 22px;
   }
 
   .tagline{
     font-size: 1.08rem;
     max-width: 46ch;
-    margin: 0 0 46px;
+    margin: 0 auto;
     color: var(--ink);
   }
 
@@ -155,12 +159,24 @@
 
   footer{
     margin-top: 8vh;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 0.85rem;
     color: var(--sage);
   }
 
+  .footer-mark{
+    width: 20px;
+    height: 20px;
+    display: block;
+    opacity: 0.6;
+    flex: none;
+  }
+
   @media (max-width: 480px){
     .wrap{ padding: 10vh 22px 8vh; }
+    .logo{ width: 96px; height: 96px; }
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -173,22 +189,18 @@
 
 <div class="wrap">
 
-  <svg class="mark" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M17 30V15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    <path d="M17 15C17 15 8 15 8 6C17 6 17 15 17 15Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-    <path d="M17 20C17 20 26 20 26 11C17 11 17 20 17 20Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-  </svg>
-
-  <p class="eyebrow">Carynne McIver Button</p>
-  <h1>Cultivate Funding Strategies, LLC</h1>
-  <p class="role">Grant Writer &amp; Strategist</p>
-
-  <p class="tagline">Helping nonprofits secure the funding they need to do their best work.</p>
+  <div class="hero">
+    <img class="logo" src="assets/cultivate.svg" alt="Cultivate Funding Strategies logo">
+    <p class="eyebrow">Carynne McIver Button</p>
+    <h1>Cultivate Funding Strategies, LLC</h1>
+    <p class="role">Grant Writer &amp; Strategist</p>
+    <p class="tagline">Helping nonprofits secure the funding they need to do their best work.</p>
+  </div>
 
   <hr class="divider">
 
   <div class="about">
-    <p>With 18+ years of experience, I partner with nonprofits on grant writing, strategy, and research — so your team can spend less time chasing funding and more time on your mission.</p>
+    <p>With 18+ years of experience, I partner with nonprofits on grant writing, strategy, and research so your team can spend less time chasing funding and more time on your mission.</p>
   </div>
 
   <ul class="services">
@@ -197,10 +209,29 @@
     <li>Grant Research</li>
   </ul>
 
-  <a href="mailto:grants@cultivatefunding.org" class="cta">Get in Touch</a>
-  <p class="email">Or email directly: <a href="mailto:grants@cultivatefunding.org">grants@cultivatefunding.org</a></p>
+  <a href="#" class="cta" id="cta-email" rel="nofollow">Get in Touch</a>
+  <p class="email">Or email directly: <a href="#" id="direct-email" rel="nofollow"></a></p>
 
-  <footer>&copy; 2026 Cultivate Funding Strategies, LLC. All rights reserved.</footer>
+  <footer>
+    <img class="footer-mark" src="assets/cultivate.svg" alt="" aria-hidden="true">
+    &copy; 2026 Cultivate Funding Strategies, LLC. All rights reserved.
+  </footer>
+
+  <script>
+    (function(){
+      var user = ['g','r','a','n','t','s'].join('');
+      var domain = ['cultivatefunding','org'].join('.');
+      var address = user + '@' + domain;
+      var mailto = 'mailto:' + address;
+
+      var cta = document.getElementById('cta-email');
+      cta.href = mailto;
+
+      var direct = document.getElementById('direct-email');
+      direct.href = mailto;
+      direct.textContent = address;
+    })();
+  </script>
 
 </div>
 
