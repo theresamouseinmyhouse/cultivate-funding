@@ -4,16 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cultivate Funding Strategies, LLC | Carynne McIver Button</title>
-<meta name="description" content="Cultivate Funding Strategies, LLC — grant writing and strategy for nonprofits, led by Carynne McIver Button.">
+<meta name="description" content="Cultivate Funding Strategies, LLC: grant writing, grant strategy, prospect research, and grant pipeline management for nonprofits, led by Carynne McIver Button.">
 <link rel="icon" type="image/svg+xml" href="assets/cultivate.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400,60;0,9..144,600,60;1,9..144,500,60&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400,60;0,9..144,600,60;1,9..144,500,60&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 
   :root{
     --ink: #3E5230;
     --paper: #F8F3E7;
+    --paper-deep: #F1E9D6;
     --gold: #C49B6A;
     --soil: #8A6239;
     --sage: #A8C568;
@@ -37,7 +38,7 @@
   }
 
   .wrap{
-    max-width: 640px;
+    max-width: 880px;
     margin: 0 auto;
     padding: 8vh 28px 10vh;
   }
@@ -94,16 +95,24 @@
     margin: 0 0 40px;
   }
 
-  .about p{
-    margin: 0 0 40px;
-    max-width: 56ch;
+  section{
+    margin: 0 0 56px;
+  }
+
+  h2{
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.2;
     color: var(--ink);
+    margin: 0 0 20px;
   }
 
   .services{
     list-style: none;
     padding: 0;
-    margin: 0 0 46px;
+    margin: 0;
     display: grid;
     gap: 10px;
   }
@@ -125,6 +134,144 @@
     transform: translateY(-3px);
   }
 
+  .stats{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 32px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    text-align: center;
+  }
+
+  .stat-figure{
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(2rem, 5vw, 2.6rem);
+    line-height: 1.1;
+    color: var(--ink);
+  }
+
+  .stat-label{
+    display: block;
+    margin-top: 6px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--soil);
+  }
+
+  .client-logos{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .client-logos a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    padding: 16px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    color: var(--ink);
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    transition: border-color 0.2s ease;
+  }
+
+  .client-logos a:hover{
+    border-color: var(--gold);
+  }
+
+  .client-logos img{
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .client-names{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    columns: 2;
+    column-gap: 32px;
+  }
+
+  .client-names li{
+    break-inside: avoid;
+    padding: 4px 0;
+  }
+
+  .client-names a{
+    color: var(--ink);
+    text-decoration-color: var(--gold);
+    text-underline-offset: 3px;
+  }
+
+  .client-names a:hover{
+    color: var(--soil);
+  }
+
+  .testimonials{
+    display: grid;
+    gap: 22px;
+  }
+
+  .testimonial{
+    margin: 0;
+    padding: 4px 0 4px 22px;
+    border-left: 3px solid var(--gold);
+  }
+
+  .testimonial blockquote{
+    margin: 0 0 10px;
+    max-width: 62ch;
+  }
+
+  .testimonial blockquote p{
+    margin: 0;
+  }
+
+  .testimonial figcaption{
+    font-size: 0.92rem;
+    color: var(--soil);
+  }
+
+  .testimonial figcaption strong{
+    font-weight: 600;
+  }
+
+  .about p{
+    margin: 0 0 18px;
+    max-width: 62ch;
+    color: var(--ink);
+  }
+
+  .about .land{
+    font-size: 0.92rem;
+    font-style: italic;
+    color: var(--soil);
+    margin: 0;
+  }
+
+  .contact{
+    background: var(--paper-deep);
+    border-radius: 16px;
+    padding: 36px 32px;
+    margin: 0;
+  }
+
   .cta{
     display: inline-block;
     background: var(--ink);
@@ -142,7 +289,7 @@
     transform: translateY(-1px);
   }
 
-  .cta:focus-visible{
+  a:focus-visible{
     outline: 3px solid var(--sage);
     outline-offset: 3px;
   }
@@ -174,13 +321,20 @@
     flex: none;
   }
 
+  @media (max-width: 720px){
+    .stats{ grid-template-columns: repeat(2, 1fr); row-gap: 28px; }
+    .client-logos{ grid-template-columns: repeat(2, 1fr); }
+  }
+
   @media (max-width: 480px){
-    .wrap{ padding: 10vh 22px 8vh; }
+    .wrap{ padding: 10vh 16px 8vh; }
     .logo{ width: 150px; height: 150px; }
+    .client-names{ columns: 1; }
+    .contact{ padding: 28px 22px; }
   }
 
   @media (prefers-reduced-motion: reduce){
-    .cta{ transition: none; }
+    .cta, .client-logos a{ transition: none; }
   }
 
 </style>
@@ -194,23 +348,84 @@
     <p class="eyebrow">Carynne McIver Button</p>
     <h1>Cultivate Funding Strategies, LLC</h1>
     <p class="role">Grant Writer &amp; Strategist</p>
-    <p class="tagline">Helping nonprofits secure the funding they need to do their best work.</p>
+    <p class="tagline">Helping nonprofits secure the funding they need to make a better world.</p>
   </div>
 
   <hr class="divider">
 
-  <div class="about">
-    <p>With 18+ years of experience, I partner with nonprofits on grant writing, strategy, and research so your team can spend less time chasing funding and more time on your mission.</p>
-  </div>
+  <section aria-labelledby="services-heading">
+    <h2 id="services-heading">Services</h2>
+    <ul class="services">
+      <li>Grant Writing</li>
+      <li>Grant Strategy</li>
+      <li>Grant Prospect Research</li>
+      <li>Creating and Managing Grant Pipelines</li>
+    </ul>
+  </section>
 
-  <ul class="services">
-    <li>Grant Writing</li>
-    <li>Grant Strategy</li>
-    <li>Grant Research</li>
-  </ul>
+  <section class="stats" aria-label="Highlights">
+    <div><span class="stat-figure">17</span><span class="stat-label">Years of experience</span></div>
+    <div><span class="stat-figure">$11.8</span><span class="stat-label">Million dollars raised</span></div>
+    <div><span class="stat-figure">$2,700</span><span class="stat-label">Average grant won per hour worked</span></div>
+    <div><span class="stat-figure">100%</span><span class="stat-label">Client satisfaction</span></div>
+  </section>
 
-  <a href="#" class="cta" id="cta-email" rel="nofollow">Get in Touch</a>
-  <p class="email">Or email directly: <a href="#" id="direct-email" rel="nofollow"></a></p>
+  <section aria-labelledby="clients-heading">
+    <h2 id="clients-heading">Clients</h2>
+    <ul class="client-logos">
+      <li><a href="https://www.alliancemedicalministry.org" target="_blank" rel="noopener"><img src="assets/clients/alliance-medical-ministry.png" alt="Alliance Medical Ministry" loading="lazy"></a></li>
+      <li><a href="https://www.communityempowermentfund.org" target="_blank" rel="noopener"><img src="assets/clients/community-empowerment-fund.png" alt="Community Empowerment Fund" loading="lazy"></a></li>
+      <li><a href="https://www.thegreenchair.org" target="_blank" rel="noopener"><img src="assets/clients/green-chair-project.png" alt="The Green Chair Project" loading="lazy"></a></li>
+      <li><a href="https://rmh-chapelhill.org/" target="_blank" rel="noopener"><img src="assets/clients/ronald-mcdonald-house-chapel-hill.png" alt="Ronald McDonald House of Chapel Hill" loading="lazy"></a></li>
+    </ul>
+    <ul class="client-names">
+      <li><a href="https://abcofnc.org" target="_blank" rel="noopener">ABC of NC</a></li>
+      <li><a href="https://www.alamance-nc.com" target="_blank" rel="noopener">Alamance County</a></li>
+      <li>Arise</li>
+      <li><a href="https://hispanicliaison.org" target="_blank" rel="noopener">El Vínculo Hispano</a></li>
+      <li>GSC</li>
+      <li><a href="https://www.menshealthnetwork.org" target="_blank" rel="noopener">Men's Health Network</a></li>
+      <li><a href="https://realityministriesinc.org" target="_blank" rel="noopener">Reality Ministries</a></li>
+      <li><a href="https://schoolforconversion.org" target="_blank" rel="noopener">School for Conversion</a></li>
+      <li><a href="https://www.seacology.org" target="_blank" rel="noopener">Seacology</a></li>
+      <li><a href="https://tmlacademy.org" target="_blank" rel="noopener">Thomas Mentor Leadership Academy</a></li>
+      <li><a href="https://tfsnc.org" target="_blank" rel="noopener">Triangle Family Services</a></li>
+      <li><a href="https://wclynchburg.org" target="_blank" rel="noopener">Westminster Canterbury of Lynchburg</a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="feedback-heading">
+    <h2 id="feedback-heading">Client Feedback</h2>
+    <div class="testimonials">
+      <figure class="testimonial">
+        <blockquote><p>“Working with Carynne has been monumental for our organization. Her attention to detail, responsiveness, and creativity has made a world of difference in our grants program. She provides excellent work and is also always available to answer questions and truly values moments to teach us and pass on her skills. We are so grateful for her services and dedication to our organization.”</p></blockquote>
+        <figcaption><strong>Liz Snyder</strong>, Executive Director, Ronald McDonald House of Chapel Hill</figcaption>
+      </figure>
+      <figure class="testimonial">
+        <blockquote><p>“Carynne has been an integral part of the success of our grantwriting efforts. Her attention to detail and her tenacity in keeping us on task have translated into concrete positive results. She understands the mission as well as the financials, enabling us to tell our story meaningfully and accurately to potential funders.”</p></blockquote>
+        <figcaption><strong>Suzi Bevacqua</strong>, Assistant Director, The Green Chair Project</figcaption>
+      </figure>
+      <figure class="testimonial">
+        <blockquote><p>“Carynne’s work with CEF has been vital to sustaining our growth. She communicates our complex, nontraditional programs in clear terms. In addition to being very responsive and conscientious, she has also been a valuable partner in strategy, and helped to streamline and improve our processes. Her support enabled CEF to secure our largest three funding opportunities in just the past two years.”</p></blockquote>
+        <figcaption><strong>Janet Xiao</strong>, Co-Director, Community Empowerment Fund</figcaption>
+      </figure>
+      <figure class="testimonial">
+        <blockquote><p>“I’m so grateful to have had the chance to work with Carynne. She listens well, grasps the essence of programs, and is able to communicate their value to funders in language they understand. In work where people with big hearts are sometimes short on details, Carynne’s attention to the entire process is invaluable.”</p></blockquote>
+        <figcaption><strong>Jonathan Wilson-Hartgrove</strong>, Founder, School for Conversion</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="about" aria-labelledby="about-heading">
+    <h2 id="about-heading">About Me</h2>
+    <p>I’ve spent nearly two decades helping organizations of all sizes craft compelling narratives to secure the funding they need. Writing has been a constant throughout my life, beginning with childhood penpals, growing to encompass adolescent fiction and college literature papers, and more recent transformative opportunities like a prison poetry class. My fundraising perspective is informed by training in racial equity and asset-based community development and I am especially eager to support teams that are committed to anti-racism, that understand and address the systemic roots of inequalities, and that center the agency and dignity of their program beneficiaries. Given my privileges as a cis white woman, I am committed to my own ongoing learning and un-learning about racism, ableism, capitalism, colonialism, and other oppressive systems.</p>
+    <p class="land">I live and work in central North Carolina from the unceded land of the Eno, Tutelo, Saponi, Occaneechi, and Shakori Native people. I acknowledge the ancestral &amp; present land stewardship and place-based knowledge of the peoples of these territories.</p>
+  </section>
+
+  <section class="contact" aria-label="Contact">
+    <a href="#" class="cta" id="cta-email" rel="nofollow">Get in Touch</a>
+    <p class="email">Or email directly: <a href="#" id="direct-email" rel="nofollow"></a></p>
+  </section>
 
   <footer>
     <img class="footer-mark" src="assets/cultivate.svg" alt="" aria-hidden="true">
@@ -230,6 +445,17 @@
       var direct = document.getElementById('direct-email');
       direct.href = mailto;
       direct.textContent = address;
+
+      // A missing client logo falls back to the organisation's name.
+      var logos = document.querySelectorAll('.client-logos img');
+      for (var i = 0; i < logos.length; i++){
+        logos[i].addEventListener('error', function(){
+          this.replaceWith(document.createTextNode(this.alt));
+        });
+        if (logos[i].complete && logos[i].naturalWidth === 0){
+          logos[i].replaceWith(document.createTextNode(logos[i].alt));
+        }
+      }
     })();
   </script>
 
